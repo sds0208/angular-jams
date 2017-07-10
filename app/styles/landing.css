@@ -5,10 +5,11 @@ body.landing  {
 .hero-content {
     position: relative;
     min-height: 600px;
-    background-image: url(../assets/images/bloc_jams_bg.jpg);
+    background-image: url(../assets/images/headphones.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    opacity: 0.5;
 }
 
 .hero-content .hero-title {
@@ -25,6 +26,7 @@ body.landing  {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
     text-shadow: 1px 1px 0px rgb(58,23,63);
+    color: black;
 }
 
 .selling-points {
