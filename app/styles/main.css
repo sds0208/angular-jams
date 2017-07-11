@@ -44,8 +44,6 @@ body  {
     top: 0;
     right: 0;
     height: 100px;
-    color: white;
-    opacity: 0.9;
     text-decoration: none;
 }
 
@@ -57,9 +55,9 @@ body  {
     padding-right: 1rem;
     /* #4 */
     vertical-align: middle;
-    color: white;
+    color: deepskyblue;
+    opacity: 0.7;
     font-size: 0.625rem;
-    letter-spacing: 0.05rem;
     font-weight: 700;
     text-transform: uppercase;
     /* #3 */
