@@ -15,10 +15,11 @@ body  {
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-    font-family: 'Open Sans';
+    font-family: 'Permanent Marker';
     color: white;
     min-height: 100%;
     padding-bottom: 200px;
+    letter-spacing: .1rem;
 }
 
 .navbar {
@@ -34,6 +35,7 @@ body  {
     position: relative;
     left: 2rem;
     cursor: pointer; /*produces finger-pointer icon when hovering over logo */
+    opacity: 0.8;
 }
 
 .navbar .links-container  {
@@ -43,7 +45,7 @@ body  {
     right: 0;
     height: 100px;
     color: white;
-    /* #3 */
+    opacity: 0.9;
     text-decoration: none;
 }
 
