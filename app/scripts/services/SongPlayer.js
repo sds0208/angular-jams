@@ -84,11 +84,20 @@
     * @type {Number}
     */
         SongPlayer.currentTime = null;
+
+    /**
+    * @desc Playback volume.  Default is 80;
+    * @type {Number}
+    */
+
+        SongPlayer.volume = 80;
     /**
     * @function SongPlayer.play
     * @desc Check the play or pause status of a song that is selected to be played; set the currently playing song to the one selected; play the song
     * @param {Object} song
     */
+
+
 
         SongPlayer.play = function(song)  {
             song = song || SongPlayer.currentSong;
@@ -132,10 +141,10 @@
                 }
             };
 
-            /**
-            * @function SongPlayer.next
-            * @desc Move to the next song on the album
-            */
+        /**
+        * @function SongPlayer.next
+        * @desc Move to the next song on the album
+        */
 
               SongPlayer.next = function()  {
                 var currentSongIndex = getSongIndex(SongPlayer.currentSong);
@@ -150,9 +159,26 @@
                 }
             };
 
+        /**
+        * @function SongPlayer.setCurrentTime
+        * @desc Set the time of the currently playing song
+        * @param {Number} time
+        */
             SongPlayer.setCurrentTime = function(time)  {
                 if (currentBuzzObject)  {
                     currentBuzzObject.setTime(time);
+                }
+            };
+
+        /**
+        * @function SongPlayer.setVolume
+        * @desc Set the volume of the currently playing song
+        * @param {Number} volume
+        */
+
+            SongPlayer.setVolume = function(volume) {
+                if (currentBuzzObject)  {
+                  currentBuzzObject.setVolume(volume);
                 }
             };
 
