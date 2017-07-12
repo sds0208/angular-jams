@@ -100,17 +100,28 @@
 
 
         SongPlayer.play = function(song)  {
-            song = song || SongPlayer.currentSong;
-            if (SongPlayer.currentSong !== song) {
-                setSong(song);
-                playSong(song);
+                song = song || SongPlayer.currentSong;
+                if (SongPlayer.currentSong !== song) {
+                    setSong(song);
+                    playSong(song);
+                    currentBuzzObject.bind('ended', function (song) {
+                        SongPlayer.next();
+                    });
 
-            } else if (SongPlayer.currentSong === song) {
-                if (currentBuzzObject.isPaused()) {
-                  setSong(song);
-                  playSong(song);
+
+
+                } else if (SongPlayer.currentSong === song) {
+                    if (currentBuzzObject.isPaused()) {
+                      setSong(song);
+                      playSong(song);
+
+                      currentBuzzObject.bind('ended', function (song) {
+                          SongPlayer.next();
+                      });
+
+                    }
                 }
-            }
+
         };
 
         /**
